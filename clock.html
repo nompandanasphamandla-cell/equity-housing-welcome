@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Clock</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .clock { font-size: 24px; margin: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Digital Clock</h1>
+    <div class="clock" id="utcClock"></div>
+    <div class="clock" id="estClock"></div>
+    <div class="clock" id="pstClock"></div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const utc = now.toUTCString();
+            const est = new Date(now.toLocaleString('en-US', { timeZone: 'America/New_York' })).toLocaleString();
+            const pst = new Date(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' })).toLocaleString();
+
+            document.getElementById('utcClock').innerText = 'UTC Time: ' + utc;
+            document.getElementById('estClock').innerText = 'EST Time: ' + est;
+            document.getElementById('pstClock').innerText = 'PST Time: ' + pst;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();  // Initial call
+    </script>
+</body>
+</html>
