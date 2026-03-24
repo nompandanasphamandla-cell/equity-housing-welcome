@@ -1,0 +1,27 @@
+.welcome-page {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.welcome-page p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.welcome-page a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.welcome-page a:hover {
+    text-decoration: underline;
+}
